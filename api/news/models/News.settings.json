@@ -1,0 +1,26 @@
+{
+  "connection": "default",
+  "collectionName": "news",
+  "info": {
+    "name": "news",
+    "description": "All news about the test page"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "required": true,
+      "type": "string"
+    },
+    "description": {
+      "required": true,
+      "type": "text"
+    },
+    "author": {
+      "model": "user",
+      "via": "news",
+      "plugin": "users-permissions"
+    }
+  }
+}
